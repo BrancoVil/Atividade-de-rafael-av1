@@ -3,6 +3,7 @@ import { Text, View, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {Ionicons} from "@expo/vector-icons";
+import Icon from 'react-native-vector-icons/Feather';
 import styles from '../Icones/style';
 
 
@@ -51,15 +52,41 @@ const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
-        <ul>
-        <Ionicons name="home" size={50} style={styles.ionhome}/>
-        <Ionicons name="search" size={50} style={styles.ionsearch}/>
-        <Ionicons name="chatbox-outline" size={50} style={styles.ionchat}/> 
-        <Ionicons name="person-circle-outline" size={50} style={styles.ionprofile}/>
-        <Ionicons name="settings" size={50} style={styles.ionsettings}/>
-        </ul>
-    <Tab.Navigator>
+    <NavigationContainer style={styles.container}>
+        
+    <Tab.Navigator screenOptions={({ route }) => ({
+		tabBarIcon: ({ color, size }) => {
+			let iconName;
+
+			switch (route.name) {
+				case 'Home':
+					iconName = 'home';
+					break;
+				case 'Search':
+					iconName = 'search';
+					break;
+				case 'Chat':
+					iconName = 'message-square';
+					break;
+				case 'Profile':
+					iconName = 'user';
+					break;
+				case 'Settings':
+					iconName = 'settings';
+					break;
+				default:
+					iconName = 'circle';
+					break;
+			}
+
+			return <Icon name={iconName} size={size} color={color} />;
+		},
+	})}
+		tabBarOptions={{
+		activeTintColor: 'orange',
+		inactiveTintColor: 'black',
+
+	}}>
       <Tab.Screen name="Home" component={HomeScreen}/>
       <Tab.Screen name="Search" component={Search}/>
       <Tab.Screen name="Chat" component={Chat}/>
