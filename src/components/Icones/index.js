@@ -6,9 +6,9 @@ import {Ionicons} from "@expo/vector-icons";
 import styles from '../Icones/style';
 
 
- export function HomeScreen() {
+ function HomeScreen() {
   return (
-    <View style={styles.container}>
+    <View>
         <Text>Home!</Text>
     </View>
   );
@@ -16,7 +16,7 @@ import styles from '../Icones/style';
 
 function Search() {
     return(
-        <View style={styles.container}>
+        <View>
           <Text>Search!</Text>
         </View>
       );
@@ -24,15 +24,14 @@ function Search() {
 
 function Chat() {
     return(
-        <View style={styles.container}>
-          <Text>Chat!</Text>
+        <View>
         </View>
       );
 }
 
 function Profile() {
     return(
-        <View style={styles.container}>
+        <View>
           <Text>Profile!</Text>
         </View>
       );
@@ -40,7 +39,7 @@ function Profile() {
 
 function Settings() {
     return(
-        <View style={styles.container}>
+        <View>
           <Text>Settings!</Text>
         </View>
       );
@@ -52,8 +51,8 @@ const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer style={styles.container}>
-        <ul style={styles.ul}>
+    <NavigationContainer>
+        <ul>
         <Ionicons name="home" size={50} style={styles.ionhome}/>
         <Ionicons name="search" size={50} style={styles.ionsearch}/>
         <Ionicons name="chatbox-outline" size={50} style={styles.ionchat}/> 
