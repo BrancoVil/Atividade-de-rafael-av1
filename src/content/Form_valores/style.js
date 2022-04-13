@@ -25,7 +25,7 @@ const styles = StyleSheet.create( {
 
    },
 
-   formLabel:{ //label de altura e peso
+   formLabel:{
 
       color: "#000000",
       fontSize: 18,
@@ -64,6 +64,22 @@ const styles = StyleSheet.create( {
       color: "#ffffff",
 
    },
+
+   numberResult:{
+      fontSize:20,
+      fontWeight:'bold'
+   },
+
+   information:{
+      fontSize:30,
+      fontWeight:'bold'
+   },
+
+   card:{
+      height:30
+      
+   }
+
 
   });
 

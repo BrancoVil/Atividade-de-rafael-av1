@@ -67,12 +67,18 @@ const styles = StyleSheet.create( {
 
    numberResult:{
       fontSize:20,
-      padding:10,
+      padding:20,
       height:40,
+      fontWeight:'bold',
+      paddingRight:30,
+      alignItems:'center',
+      paddingBottom:20,
+
    },
 
    information:{
-      fontSize:40
+      fontSize:40,
+      fontWeight:'bold',
    }
 
   });

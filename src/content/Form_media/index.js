@@ -56,41 +56,41 @@ export default function Form_media () {
                    keyboardType='numeric'//determinado o tipo de teclado
 
                  />
-            <TouchableOpacity
-            style={styles.buttonCalculator}
-            activeOpacity={0.7}
-            onPress={gerarResultado}>
-            <Text style={styles.textbuttonCalculator}>Calcular Média</Text>
-           </TouchableOpacity>
+                  <TouchableOpacity
+                      style={styles.buttonCalculator}
+                        activeOpacity={0.7}
+                          onPress={gerarResultado}>
+                    <Text style={styles.textbuttonCalculator}>Calcular Média</Text>
+                  </TouchableOpacity>
  
-            </View>
+      </View>
 
             <View style={styles.cardResult}>
-				<Text style={styles.numberResult}>
-					Total:
-					{' '}
-					{total.toFixed(1)}
-				</Text>
-				<Text style={styles.numberResult}>
-					Média:
-					{' '}
-					{por.toFixed(1)}
-				</Text>
-			</View>
+				      <Text style={styles.numberResult}>
+				      	TOTAL:
+					        {' '}
+					        {total.toFixed(1)}
+				      </Text>
+				      <Text style={styles.numberResult}>
+					      MÉDIA:
+					        {' '}
+					        {por.toFixed(1)}
+				      </Text>
+			      </View>
 
-			{por < 5 && por > 0 && (
-				<Text style={styles.information}>Reprovado</Text>
-			)}
+			          {por < 5 && por > 0 && (
+				          <Text style={styles.information}>REPROVADO :(</Text>
+)}
 
-			{por >= 5 && por < 7 && (
-				<Text style={styles.information}>Recuperação</Text>
-			)}
+			          {por >= 5 && por < 7 && (
+				          <Text style={styles.information}>RECUPERAÇÃO</Text>
+)}
 
-			{por >= 7 && (
-				<Text style={styles.information}>Aprovado</Text>
-			)}
+			          {por >= 7 && (
+				          <Text style={styles.information}>APROVADO!</Text>
+)}
 
-      </View>
+            </View>
 
     );
   }
